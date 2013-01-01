@@ -1,0 +1,73 @@
+/* ================================
+ * !Messages
+ * 
+ * Note : The !important are used to avoid context inherit
+ * ================================*/
+
+@mixin message($name, $color) {
+	&.#{$name} {
+		background-color: mix($color, #FFF, 15%) !important;
+		background-image: url('../image/' + $name + '.png') !important;
+		border-color: mix($color, #FFF, 40%) !important;
+
+		&.inline { color: $color !important; }
+	}
+}
+
+/*
+ * !Standard messages
+ */
+.message {
+	background: no-repeat .84em .92em !important;
+	border: 2px solid !important;
+	color: #000 !important;
+	display: block !important;
+	margin: 10px !important;
+	font: default-font() !important;
+	padding: 10px 10px 10px 32px !important;
+	vertical-align: middle;
+
+	@include message('confirm', #009900);
+	@include message('info', #5D84B2);
+	@include message('error', #FF7000);
+	@include message('warning', #CC0000);
+
+	/*
+	 * !Inline messages
+	 */
+	&.inline {
+		background-color: transparent !important;
+		background-position: .42em .1em !important;
+		border: 0 !important;
+		display: inline-block !important;
+		margin: 0 0 0 10px !important;
+		padding: 0 0 0 27px !important;
+	}
+
+	/*
+	 * !Messages content
+	 */
+	strong {
+		display: block !important;
+		font-weight: bold !important;
+	}
+
+	p {
+		font-size: 12px !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	ul {
+		border: 0 !important;
+		margin: 0 0 0 20px !important;
+		list-style: square !important;
+	}
+
+	li {
+		background: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+}

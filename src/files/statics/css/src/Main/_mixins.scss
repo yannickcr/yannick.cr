@@ -1,0 +1,172 @@
+/* ================================
+ * !Mixins
+ * ================================*/
+
+/*
+ * !Internet Explorer specific rules
+ */
+@mixin ie { .ie & { @content } }
+@mixin ie6 { .ie6 & { @content } }
+@mixin ie7 { .ie7 & { @content } }
+@mixin ie8 { .ie8 & { @content } }
+@mixin ie9 { .ie9 & { @content } }
+
+/*
+ * !Experimental
+ */
+@mixin experimental($property, $value) {
+	   -moz-#{$property}: $value;
+	    -ms-#{$property}: $value;
+	     -o-#{$property}: $value;
+	-webkit-#{$property}: $value;
+	        #{$property}: $value;
+}
+
+@mixin experimental-value($property, $value) {
+	#{$property}:    -moz-#{$value};
+	#{$property}:     -ms-#{$value};
+	#{$property}:      -o-#{$value};
+	#{$property}: -webkit-#{$value};
+	#{$property}:         #{$value};
+}
+
+/*
+ * !Linear gradient
+ */
+@mixin linear-gradient($direction, $color1,
+	$color2: false,
+	$color3: false,
+	$color4: false,
+	$color5: false,
+	$color6: false,
+	$color7: false,
+	$color8: false,
+	$color9: false,
+	$color10: false
+) {
+	@include experimental-value('background-image', "linear-gradient(" + compact($direction, $color1, $color2, $color3, $color4, $color5, $color6, $color7, $color8, $color9, $color10) + ")");
+}
+
+/*
+ * !Radial gradient
+ */
+@mixin radial-gradient($position, $shape, $color1, $color2,
+	$color3: false,
+	$color4: false,
+	$color5: false,
+	$color6: false,
+	$color7: false,
+	$color8: false,
+	$color9: false,
+	$color10: false
+) {
+	@include experimental-value('background-image', "radial-gradient(" + compact($direction, $color1, $color2, $color3, $color4, $color5, $color6, $color7, $color8, $color9, $color10) + ")");
+}
+
+/*
+ * !Box shadow
+ */
+@mixin box-shadow($value) {
+	@include experimental('box-shadow', $value);
+}
+
+/*
+ * !Transition
+ */
+@mixin transition($value) {
+	@include experimental('transition', $value);
+}
+
+/*
+ * !Transform
+ */
+@mixin transform($value) {
+	@include experimental('transform', $value);
+}
+
+/*
+ * !Appearance
+ */
+@mixin appearance($value) {
+	@include experimental('appearance', $value);
+}
+
+/*
+ * !Box sizing
+ */
+@mixin box-sizing($value) {
+	@include experimental('box-sizing', $value);
+}
+
+/*
+ * !Hyphens
+ */
+@mixin hyphens($value) {
+	@include experimental('hyphens', $value);
+}
+
+/*
+ * !Default font
+ */
+@function default-font(
+	$style : normal,
+	$size: 1.6rem,
+	$line-height: 2.6rem,
+	$face: 'Tahoma, Geneva, Kalimati, sans-serif'
+) {
+	@return $style + ' ' + $size + '/' + $line-height + ' ' + $face;
+}
+
+/*
+ * !Font face
+ */
+@mixin font-face($name, $path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $name;
+		src:url($path + '.eot#') format('eot'),
+			url($path + '.woff') format('woff')/*,
+			url($path + '.ttf') format('truetype'),
+			url($path + '.svg#svg' + $name) format('svg')*/;
+		@if $weight {
+			font-weight: $weight;
+		}
+		@if $style {
+			font-style: $style;
+		}
+	}
+}
+
+/*
+ * !Clearfix
+ */
+@mixin clearfix() {
+	zoom: 1;
+
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+}
+
+/*
+ * !Image replacement
+ */
+@mixin ir() {
+	font: 0/0 a;
+	color: transparent;
+}
+
+/*
+ * !Placeholder
+ */
+@mixin input-placeholder {
+	&:-moz-placeholder { @content }
+	&::-ms-input-placeholder { @content }
+	&::-webkit-input-placeholder { @content }
+	&:input-placeholder { @content }
+}

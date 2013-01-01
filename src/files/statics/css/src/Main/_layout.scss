@@ -1,0 +1,106 @@
+/* ================================
+ * !Layout
+ * ================================*/
+
+/*
+ * !Global
+ */
+html {
+	font-size: 10px;
+}
+
+body {
+	background: #F0F0F0;
+	color: #333;
+	font: default-font();
+	overflow-x: hidden;
+}
+
+/*.main-container {
+	background: #1C1C1C;
+	left: 0;
+	margin-top: 44px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	-webkit-transition: margin .2s;
+	transition: margin .2s;
+	width: 100%;
+}*/
+
+.main-container {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+}
+
+.main-container.slide, .main-container:target {
+	margin-left: 260px;
+
+	.header {
+		left: 260px;
+	}
+}
+
+.main-content-container {
+	background: #FFF;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	position: relative;
+	z-index: 1;
+
+	@media only screen and (min-width : 1440px) {
+		margin-top: 14.6rem;
+	}
+
+}
+
+.main-content {
+	margin: 0 auto;
+	max-width: 66rem;
+	padding: 1.6rem;
+
+	@media only screen and (min-width : 1440px) {
+		padding: 3.6rem;
+	}
+
+}
+
+/* 
+ * !Grid
+ */
+$gutter: 0;
+$max-cols: 5;
+$classList: null;
+
+.row {
+	overflow: hidden;
+
+	.row {
+		margin: 0 (-$gutter / 2);
+		vertical-align: middle;
+	}
+
+}
+
+@for $i from 1 through $max-cols {
+	@for $j from 1 through $max-cols {
+		@if $i <= $j {
+			$class: unquote('.grid-' + $i + '-' + $j);
+			
+			#{$class} {
+				width: percentage($i * (1 / $j));
+			}
+			$classList: join($classList, $class, comma);
+		}
+	}
+}
+
+#{$classList} {
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: left;
+	overflow: hidden;
+	min-height: 1px;
+	padding: 0 ($gutter / 2);
+}

@@ -1,0 +1,134 @@
+/* ================================
+ * !Content
+ * ================================*/
+
+.content {
+	@include clearfix();
+	@include hyphens(auto);
+	margin: 1.6rem 0;
+	text-align: justify;
+
+	@media only screen and (min-width : 1440px) {
+		margin: 3.2rem 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: bold;
+		margin: 1.6rem 0;
+	}
+
+	h1 {
+		font-size: 4.2rem;
+	}
+
+	h2 {
+		font-size: 2.6rem;
+		line-height: 3.38rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+		line-height: 2.6rem;
+	}
+
+	p {
+		margin: 1.6rem 0;
+	}
+
+	pre {
+		background: #272822;
+		color: #EEE;
+		font: 1.4rem/2.3rem Consolas, monospace;
+		margin: 1.6rem 0;
+		padding: 1.6rem;
+		text-shadow: none;
+
+		@media only screen and (min-width : 1440px) {
+			margin-left: -6.4rem;
+			margin-right: -6.4rem;
+		}
+
+	}
+
+	ul, ol {
+		list-style: disc;
+		margin: 1.5rem 2rem;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+
+	li {
+
+	}
+
+	strong {
+		font-weight: bold;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	img {
+		max-width: 90%;
+		vertical-align: middle;
+	}
+
+
+	blockquote:before, blockquote:after, q:before, q:after {
+		color: #EEE;
+		font-size: 10rem;
+		line-height: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	blockquote:before, q:before {
+		content: open-quote;
+		left: 0;
+		top: 4rem;
+	}
+
+	blockquote:after, q:after {
+		bottom: 0;
+		content: close-quote;
+		right: 0;
+	}
+
+	blockquote, q {
+		quotes: '"' '"' "'" "'";
+		border: 0.4rem solid #EEE;
+		color: #555;
+		font-size: 2rem;
+		line-height: 2.6rem;
+		padding: 1.6rem;
+		position: relative;
+		max-width: 33rem;
+	}
+
+	figure, blockquote, q {
+		clear: both;
+		text-align: center;
+		margin: 0 auto 2.6rem;
+
+		@media only screen and (min-width : 1440px) {
+
+			&:nth-of-type(odd) {
+				float: left;
+				margin-left: -33rem;
+				margin-right: 3.6rem;
+			}
+
+			&:nth-of-type(even) {
+				float: right;
+				margin-left: 3.6rem;
+				margin-right: -33rem;
+			}
+
+		}
+
+	}
+
+}

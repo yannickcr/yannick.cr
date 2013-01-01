@@ -1,0 +1,225 @@
+/* ================================
+ * !Forms
+ * ================================*/
+
+/*
+ * !Classic forms
+ */
+
+/* !Containers */
+form {
+	position: relative;
+
+	div, li, p {
+		font-size: 13px;
+		margin: 6px 0;
+	}
+
+	li, p {
+		padding: 2px 3px;
+	}
+}
+
+legend span {
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+}
+
+fieldset {
+	border: 1px solid #D9D9D9;
+	padding: 0 10px;
+}
+
+.form-subsection {
+	border-left: 1px solid #D9D9D9;
+	margin: 10px 0 10px 60px;
+	padding: 0 0 0 20px;
+}
+
+/* !Labels */
+.form-label, label {
+	display: block;
+	padding: 5px 2px;
+	vertical-align: middle;
+	width: 0;
+	white-space: nowrap;
+
+	&.after {
+		display: inline;
+		margin-right: 5px;
+	}
+
+}
+
+/* !Inputs */
+input, select, textarea {
+	background: #212121;
+	border: 0;
+	border-radius: 5px;
+	color: #FFF;
+	font: default-font($size: 1.4rem);
+	margin: 0;
+	max-width: 100%;
+	padding: 5px 4px;
+	@include box-sizing(content-box);
+	@include appearance(none);
+	@include transition(background .4s);
+	vertical-align: middle;
+	width: 222px;
+	@include input-placeholder {
+		color: rgba(255, 255, 255, .2);
+	}
+
+	/* !Inputs (focus) */
+	&:focus {
+		background-color: #2A2A2A;
+	}
+
+	/* !Inputs (error) */
+	&.form-error {
+		background: #FBE3E4;
+		border-color: #FBC2C4;
+
+		/* !Inputs (error, focus) */
+		:focus {
+			outline-color: #FBC2C4;
+		}
+
+	}
+
+	/* !Inputs (disabled) */
+	&[disabled] {
+		background: #E5E5E5;
+		border-color: #BABABA;
+		color: #A4A4A4;
+	}
+
+}
+
+/* !Inputs (invalid) */
+:invalid { box-shadow: none; }
+
+select {
+	max-width: 100%;
+	padding: 4px;
+	width: 232px;
+}
+
+textarea { vertical-align: top; }
+
+input {
+	max-height: 18px;
+
+	&[type=checkbox], &[type=radio] {
+		border: 0;
+		margin: 7px;
+		vertical-align: middle;
+		width: auto;
+
+		&.before {
+			margin-left: 0;
+		}
+
+	}
+
+	&[type=search] {
+		background: #25201F;
+		box-shadow: 1px 1px 0 rgba(255, 255, 255, .1), 3px 3px 3px #111 inset;
+		color: #C69B55;
+		@include input-placeholder {
+			color: rgba(198, 155, 85, .2);
+		}
+
+		/* !Inputs (focus) */
+		&:focus {
+			background-color: #363130;
+		}
+
+	}
+
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button {
+		display: none;
+	}
+
+}
+
+/* !Special */
+.form-infos {
+	font-size: 12px;
+}
+
+.form-submit {
+	text-align: right;
+}
+
+.form-required {
+
+	label {
+		font-weight: bold;
+
+		span {
+			color: #F00;
+			cursor: help;
+			font-size: 12px;
+			margin-left: 5px;
+		}
+
+	}
+
+}
+
+/*
+ * !Lite forms
+ */
+.form-lite {
+
+	div, li, p {
+		font-size: 12px;
+	}
+
+	.form-label, label {
+		display: inline-block;
+		width: auto;
+	}
+
+	input, select {
+		font-size: 12px;
+		padding: 1px;
+		width: auto;
+	}
+
+}
+
+/*
+ * !Form grid
+ */
+@function grid-width($n) {
+	@if $n == 0 {
+		@return auto;
+	}
+	@return $n * 48 + ($n - 1) * 10;
+}
+
+@for $n from 0 through 8 {
+	$width: grid-width($n);
+
+	.form-grid-#{$n} {
+
+		@if type-of($width) == string {
+			width: $width;
+		} @else {
+			width: $width + px;
+		}
+	}
+
+	select.form-grid-#{$n} {
+
+		@if type-of($width) == string {
+			width: $width;
+		} @else {
+			width: $width + 10px;
+		}
+	}
+}

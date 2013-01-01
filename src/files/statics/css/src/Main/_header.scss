@@ -1,0 +1,62 @@
+/* ================================
+ * !Header
+ * ================================*/
+
+.header {
+	text-align: center;
+	width: 100%;
+
+	@media only screen and (min-width : 1440px) {
+		position: fixed;
+	}
+
+	h1 {
+		font: bold 2em/1em 'Lobster Two', sans-serif;
+		text-shadow: 2px 2px 0 #FFF;
+
+		@media only screen and (min-width : 1440px) {
+			font-size: 6.4rem;
+			line-height: 6.4rem;
+		}
+
+		a:link, a:visited {
+			border: 0;
+			color: inherit;
+			@include transition(color .3s);
+		}
+
+		a:focus, a:hover, a:active {
+			color: #3C3C3C;
+			text-decoration: none;
+		}
+
+	}
+
+	h2 {
+		font: 1em/1em 'Lobster Two', sans-serif;
+		letter-spacing: 0.5em;
+
+		@media only screen and (min-width : 1440px) {
+			font-size: 1.8rem;
+			line-height: 2rem;
+			letter-spacing: 1.2rem;
+		}
+
+		&:after {
+			color: #BBB;
+			content: '12';
+			display: block;
+			font: 4em/2rem 'Nymphette';
+			letter-spacing: 1rem;
+
+			@media only screen and (min-width : 1440px) {
+				font-size: 8rem;
+				line-height: 2.2rem;
+				letter-spacing: 2rem;
+			}
+
+		}
+
+	}
+
+}

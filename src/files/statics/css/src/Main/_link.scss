@@ -1,0 +1,35 @@
+/* ================================
+ * !Links
+ * ================================*/
+
+a {
+
+	/*
+	 * !Classic links
+	 */
+	&:link, &:visited {
+		color: #3D9DA5;
+		border-bottom: 1px solid rgba(61, 157, 165, 1);
+		text-decoration: none;
+		@include transition(border .3s);
+	}
+
+	&:focus, &:hover, &:active {
+		border-bottom-color: rgba(61, 157, 165, 0);
+	}
+
+	/*
+	 * !Block links
+	 */
+	&.container {
+
+		&:link, &:visited {
+			color: inherit;
+			border: 0;
+			font-weight: normal;
+			display: block;
+		}
+
+	}
+
+}
