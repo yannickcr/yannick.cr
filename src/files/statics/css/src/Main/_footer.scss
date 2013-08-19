@@ -4,5 +4,126 @@
 
 .footer {
 	min-height: 50px;
+	padding: 4rem 0;
 	position: relative;
+	text-align: center;
+
+	@media only screen and (min-width : 800px) {
+		padding: 8rem 0;
+	}
+
+	li {
+		display: inline;
+	}
+
+	a {
+		border: 0;
+		color: #C0C0C0;
+		display: inline-block;
+		font-size: 0;
+		position: relative;
+		margin: 2rem;
+
+		@media only screen and (min-width : 800px) {
+			margin: 5rem;
+		}
+
+		&:before {
+			content: attr(data-icon);
+			display: inline-block;
+			font-family: 'Yannick Cr', Tahoma, Geneva, Kalimati, sans-serif;
+			font-size: 5rem;
+			transition: .3s all;
+		}
+
+		&:focus, &:hover, &:active {
+			color: #333;
+
+			&:before, &:after {
+				transform: scale(2);
+			}
+
+		}
+
+	}
+
+	/*
+	// Twitter
+	[data-icon="☺"] {
+
+		&:focus, &:hover, &:active {
+			color: #0084B4;
+		}
+
+	}
+
+	// GitHub
+	[data-icon="♯"] {
+
+		&:focus, &:hover, &:active {
+			color: #333;
+		}
+
+	}
+
+	// Flickr
+	[data-icon="⛪"] {
+
+		&:after {
+			color: #C0C0C0;
+			content: attr(data-icon);
+			display: inline-block;
+			font: 5rem 'Yannick Cr', Tahoma, Geneva, Kalimati, sans-serif;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			transition: .3s all;
+			width: 50%;
+		}
+
+		&:focus, &:hover, &:active {
+			color: #FF0084;
+
+			&:after {
+				color: #006ADD;
+			}
+		}
+	}
+
+	// Lanyrd
+	[data-icon="⚐"] {
+
+		&:focus, &:hover, &:active {
+			color: #152E51;
+		}
+
+	}
+
+	// Steam
+	[data-icon="♞"] {
+
+		&:focus, &:hover, &:active {
+			color: #262626;
+		}
+
+	}
+
+	// Last.fm
+	[data-icon="♬"] {
+
+		&:focus, &:hover, &:active {
+			color: #DA1102;
+		}
+
+	}
+
+	// LinkedIn
+	[data-icon="✍"] {
+
+		&:focus, &:hover, &:active {
+			color: #0073B2;
+		}
+
+	}*/
+
 }

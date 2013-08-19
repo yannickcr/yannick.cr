@@ -2,8 +2,5 @@
  * !Fonts
  * ================================*/
 
-@include font-face('Nymphette', '../../font/Nymphette');
-@include font-face('Lobster Two', '../../font/Lobster-Two');
-@include font-face('Lobster Two', '../../font/Lobster-Two-Italic', 400, 'italic');
-@include font-face('Lobster Two', '../../font/Lobster-Two-Bold', 700);
-@include font-face('Lobster Two', '../../font/Lobster-Two-Bold-Italic', 700, 'italic');
+@include font-face('Share', '../../font/Share-Bold', 700);
+@include font-face('Yannick Cr', '../../font/Yannick-Cr');

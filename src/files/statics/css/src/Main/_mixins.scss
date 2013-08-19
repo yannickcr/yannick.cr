@@ -10,6 +10,7 @@
 @mixin ie7 { .ie7 & { @content } }
 @mixin ie8 { .ie8 & { @content } }
 @mixin ie9 { .ie9 & { @content } }
+@mixin ie10 { .ie10 & { @content } }
 
 /*
  * !Experimental

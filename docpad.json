@@ -1,10 +1,11 @@
 {
+	"prompts": false,
 	"port": 9778,
 	"templateData": {
 		"site": {
 			"url": "http://yannick.cr",
 			"title": "Yannick Croissant",
-			"sub_title": "Code &amp; stuff"
+			"sub_title": "Code &amp; Stuff"
 		}
 	}
 }

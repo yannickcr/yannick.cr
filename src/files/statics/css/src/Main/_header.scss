@@ -6,17 +6,18 @@
 	text-align: center;
 	width: 100%;
 
-	@media only screen and (min-width : 1440px) {
+	@media only screen and (min-width : 800px) {
 		position: fixed;
 	}
 
 	h1 {
-		font: bold 2em/1em 'Lobster Two', sans-serif;
+		font: 2em/1em 'Yannick Cr', Tahoma, Geneva, Kalimati, sans-serif;
 		text-shadow: 2px 2px 0 #FFF;
+		margin-top: 1.3rem;
 
-		@media only screen and (min-width : 1440px) {
+		@media only screen and (min-width : 800px) {
 			font-size: 6.4rem;
-			line-height: 6.4rem;
+			line-height: 5.1rem;
 		}
 
 		a:link, a:visited {
@@ -33,26 +34,30 @@
 	}
 
 	h2 {
-		font: 1em/1em 'Lobster Two', sans-serif;
+		font: 1em/1em 'Yannick Cr', Tahoma, Geneva, Kalimati, sans-serif;
 		letter-spacing: 0.5em;
 
-		@media only screen and (min-width : 1440px) {
+		@media only screen and (min-width : 800px) {
 			font-size: 1.8rem;
-			line-height: 2rem;
 			letter-spacing: 1.2rem;
+			line-height: 2.5rem;
 		}
 
 		&:after {
 			color: #BBB;
-			content: '12';
+			content: '42';
 			display: block;
-			font: 4em/2rem 'Nymphette';
+			font: 4em/2rem 'Yannick Cr';
 			letter-spacing: 1rem;
 
-			@media only screen and (min-width : 1440px) {
+			@media only screen and (min-width : 800px) {
 				font-size: 8rem;
-				line-height: 2.2rem;
 				letter-spacing: 2rem;
+				line-height: 2.8rem;
+			}
+
+			@include ie {
+				content: '';
 			}
 
 		}

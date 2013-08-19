@@ -1,6 +1,3 @@
-/*
- * Gruntfile for Tuez Les Tous v3
- */
 module.exports = function(grunt) {
 
 	// Project configuration.
@@ -64,7 +61,7 @@ module.exports = function(grunt) {
 				browser: true
 			}
 		},
-		uglify: {},
+		uglify: {}
 
 	});
 
@@ -74,5 +71,5 @@ module.exports = function(grunt) {
 
 	// Plugin tasks
 	grunt.loadNpmTasks('grunt-compass');
-//	grunt.loadNpmTasks('/usr/local/lib/node_modules/grunt-compass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 };

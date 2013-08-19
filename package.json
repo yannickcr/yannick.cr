@@ -16,6 +16,8 @@
     "docpad-plugin-swig": "git://github.com/thisispete/docpad-plugin-swig.git"
   },
   "devDependencies": {
-    "grunt-compass": "*"
+    "grunt": "*",
+    "grunt-compass": "*",
+    "grunt-contrib-watch": "*"
   }
 }

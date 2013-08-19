@@ -48,7 +48,7 @@ body {
 	position: relative;
 	z-index: 1;
 
-	@media only screen and (min-width : 1440px) {
+	@media only screen and (min-width : 800px) {
 		margin-top: 14.6rem;
 	}
 
@@ -59,13 +59,13 @@ body {
 	max-width: 66rem;
 	padding: 1.6rem;
 
-	@media only screen and (min-width : 1440px) {
+	@media only screen and (min-width : 800px) {
 		padding: 3.6rem;
 	}
 
 }
 
-/* 
+/*
  * !Grid
  */
 $gutter: 0;
@@ -86,7 +86,7 @@ $classList: null;
 	@for $j from 1 through $max-cols {
 		@if $i <= $j {
 			$class: unquote('.grid-' + $i + '-' + $j);
-			
+
 			#{$class} {
 				width: percentage($i * (1 / $j));
 			}
