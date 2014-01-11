@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "author": {
     "name": "Yannick Croissant",
-    "url": "http://yannick.cr"
+    "url": "https://yannick.cr"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/yannickcr/yannick.cr.git"
+    "url": "https://github.com/yannickcr/yannick.cr.git"
   },
   "dependencies": {
     "docpad-plugin-cleanurls": "*",
     "docpad-plugin-highlightjs": "*",
     "docpad-plugin-marked": "*",
-    "docpad-plugin-swig": "git://github.com/thisispete/docpad-plugin-swig.git"
+    "docpad-plugin-swig": "*"
   },
   "devDependencies": {
     "grunt": "*",

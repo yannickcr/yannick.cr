@@ -8,9 +8,9 @@ isPage: true
 {% for post in query|exec %}
 	<item>
 		<title>{{ post.title }}</title>
-		<link>http://yannick.cr{{ post.url }}</link>
+		<link>https://yannick.cr{{ post.url }}</link>
 		<pubDate>{{ post.date|date('r') }}</pubDate>
-		<guid isPermaLink="true">http://yannick.cr{{ post.url }}</guid>
+		<guid isPermaLink="true">https://yannick.cr{{ post.url }}</guid>
 		<description><![CDATA[{{ post.contentRenderedWithoutLayouts }}]]></description>
 		<content:encoded><![CDATA[{{ post.contentRenderedWithoutLayouts }}]]></content:encoded>
 	</item>

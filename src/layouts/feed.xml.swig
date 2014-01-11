@@ -10,8 +10,8 @@
 	>
 	<channel>
 		<title>{{ site.title }}</title>
-		<atom:link href="http://yannick.cr/feeds/posts.xml" rel="self" type="application/rss+xml" />
-		<link>http://yannick.cr</link>
+		<atom:link href="https://yannick.cr/feeds/posts.xml" rel="self" type="application/rss+xml" />
+		<link>https://yannick.cr</link>
 		<description>Code &amp; Stuff</description>
 		{% set query = "getFilesAtPath('posts').findAllLive({extension:'md',ignored:{ $ne: true }},[{date:1}]).toJSON()" %}
 		{% set result = query|exec %}
