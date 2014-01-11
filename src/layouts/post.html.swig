@@ -9,6 +9,7 @@
 		{{ content }}
 	</div>
 	<footer>
+		<p class="contribute">Want to contribute to this article? <a href="https://github.com/yannickcr/yannick.cr/blob/master/src/documents/{{ document.relativePath }}">Fork it on GitHub</a></p>
 		<div id="disqus_thread"></div>
 		<script>
 			var disqus_shortname = 'yannickcr';
