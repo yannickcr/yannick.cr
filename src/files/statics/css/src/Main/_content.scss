@@ -81,43 +81,16 @@
 		vertical-align: middle;
 	}
 
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		color: #EEE;
-		font-size: 10rem;
-		line-height: 0;
-		position: absolute;
-		z-index: -1;
-	}
-
-	blockquote:before, q:before {
-		content: open-quote;
-		left: 0;
-		top: 4rem;
-	}
-
-	blockquote:after, q:after {
-		bottom: 0;
-		content: close-quote;
-		right: 0;
-	}
-
 	blockquote, q {
-		quotes: '"' '"' "'" "'";
-		border: 0.4rem solid #EEE;
-		color: #555;
-		font-size: 2rem;
-		line-height: 2.6rem;
-		padding: 1.6rem;
-		position: relative;
-		max-width: 33rem;
+		color: #999;
+		padding: 0 1.6rem;
 	}
 
 	figure, blockquote, q {
 		clear: both;
-		text-align: center;
+//		text-align: center;
 		margin: 0 auto 2.6rem;
-
+/*
 		@media only screen and (min-width : 800px) {
 
 			&:nth-of-type(odd) {
@@ -133,7 +106,6 @@
 			}
 
 		}
-
+*/
 	}
-
 }
