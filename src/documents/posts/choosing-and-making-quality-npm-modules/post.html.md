@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Choosing and making quality npm modules
-date: 2013-01-10 12:00
+date: 2014-01-11 17:00
 ignored: false
 ---
 Since its creation Node.js gained more and more attention and the size of its module repository ([NPM](http://npmjs.org)) increase [very rapidly](http://modulecounts.com).
 
 But with near 55 000 available modules created by the community it can be very difficult to make the good choice for your own projects.
 
-How to know if it's safe to use this tiny module on your billion pageviews/day project?
+How to know if it's safe to use this tiny module on your billion pageviews/day project ?
 
 Short answer: You can't.
 
@@ -31,12 +31,12 @@ The presence of a complete test suite is very important to help you to see if th
 
 Tests are a very powerful tool to prevent regressions between releases and they must not be neglected.
 
-#### For Users
+For Users:
 
 - Check the module readme for a ["badge"](http://about.travis-ci.org/docs/user/status-images/) like this: ![Build status for travis-web](passing.png). Most of online services provides some similar images to display the current status of the project.
 - Search a `test` folder at the project root. The standard command to run the tests of a npm module is `npm test`.
 
-#### For Authors
+For Authors:
 
 - [Mocha](http://visionmedia.github.com/mocha)
 - [Jasmine](http://pivotal.github.io/jasmine)
@@ -55,11 +55,11 @@ Some tools like [Blanket.js](http://blanketjs.org) can analyze your code then ou
 
 You can also send this report to a service like [Coveralls](https://coveralls.io) to keep an history of your code coverage and be warned if any commit decrease the percentage of covered code.
 
-#### For Users
+For Users:
 
 - Check the module readme for a Coveralls "badge" like this: ![Coverage status for gitlabhq](coverage-86.png)
 
-#### For Authors
+For Authors:
 
 - [Blanket.js](http://blanketjs.org)
 - [Istanbul](https://github.com/gotwarlost/istanbul)
@@ -67,7 +67,7 @@ You can also send this report to a service like [Coveralls](https://coveralls.io
 
 ### Documentation
 
-An undocumented module is useless for everyone except its author. What is the point to open-source something if you do not explain to the users what it does and how to use it?
+An undocumented module is useless for everyone except its author. What is the point to open-source something if you do not explain to the users what it does and how to use it ?
 
 The minimal documentation is the Readme at the root of the project, it should at least contain:
 
@@ -94,9 +94,9 @@ This specifications can be summarized like this:
 
 > Given a version number MAJOR.MINOR.PATCH, increment the:
 >
-> MAJOR version when you make incompatible API changes,
-> MINOR version when you add functionality in a backwards-compatible manner, and
-> PATCH version when you make backwards-compatible bug fixes.
+> - MAJOR version when you make incompatible API changes,
+> - MINOR version when you add functionality in a backwards-compatible manner, and
+> - PATCH version when you make backwards-compatible bug fixes.
 >
 > Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
@@ -104,11 +104,11 @@ So upgrading from version 2.4.5 to 2.6.4 should be painless (backwards compatibi
 
 A proper versioning is critical because it allows you to upgrade seamlessly your depencendices without any risks for your application.
 
-#### For Users
+For Users:
 
 - [next-update](https://github.com/bahmutov/next-update): Tests if module's dependencies can be updated to newer / latest versions without breaking the tests.
 
-#### For Authors
+For Authors:
 
 - [semver](http://semver.org): The Semantic Versioning 2.0.0 specification
 
@@ -122,12 +122,12 @@ For example some tools like [JSHint](http://www.jshint.com/docs) can help you to
 
 There is also some tools to check your code maintainability like [Plato](https://github.com/es-analysis/plato) or [CodeClimate](https://codeclimate.com), they can generate some very useful reports to spot the quality problems in your project.
 
-#### For Users
+For Users:
 
 - Check the module readme for a CodeClimate "badge" like this: ![CodeClimate status for jekyll](codeclimate-3-4.png)
 - Search a `.jshintrc` file (JSHint) and/or `.jscs.json` file (JSCS) at the project root.
 
-#### For Authors
+For Authors:
 
 - [Plato](https://github.com/es-analysis/plato)
 - [JSHint](http://www.jshint.com/docs)
@@ -148,7 +148,7 @@ Most of the npm modules are hosted on GitHub and you can have a nice overview of
 
 But an inactive project does not mean the project is abandoned, maybe the author is considering the module as "done" if it fits his needs and if there is no open issues or pull requests.
 
-### Authors
+### Authors:
 
 You can also check the author name. It can be a trusted company ([Nodejitsu](https://github.com/nodejitsu), [Walmart Labs](https://github.com/walmartlabs‎), [Yahoo](https://github.com/yahoo), etc.), a trusted developer ([John Resig](https://github.com/jeresig), [Isaac Z. Schlueter](https://github.com/isaacs), [Mikeal Rogers](https://github.com/mikeal‎), etc.) or a total stranger. In all cases the support of the past projects of the company/developer will indicate if they are used to maintain their open-source projects.
 
