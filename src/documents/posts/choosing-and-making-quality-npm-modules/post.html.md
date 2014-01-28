@@ -23,7 +23,7 @@ I made a list of tools/practices to help you to check npm modules. It can help y
 
 ### Tests
 
-![Running tests with Mocha](tests.png)
+![Running tests with Mocha](/posts/choosing-and-making-quality-npm-modules/tests.png)
 
 According to [Nodechecker](nodechecker.com) more than half of the npm modules do not have any tests, that's sad :(.
 
@@ -33,7 +33,7 @@ Tests are a very powerful tool to prevent regressions between releases and they 
 
 For Users:
 
-- Check the module readme for a ["badge"](http://about.travis-ci.org/docs/user/status-images/) like this: ![Build status for travis-web](passing.png). Most of online services provides some similar images to display the current status of the project.
+- Check the module readme for a ["badge"](http://about.travis-ci.org/docs/user/status-images/) like this: ![Build status for travis-web](/posts/choosing-and-making-quality-npm-modules/passing.png). Most of online services provides some similar images to display the current status of the project.
 - Search a `test` folder at the project root. The standard command to run the tests of a npm module is `npm test`.
 
 For Authors:
@@ -45,7 +45,7 @@ For Authors:
 
 ### Code coverage
 
-![Code coverage report with Blanket.js](coverage.png)
+![Code coverage report with Blanket.js](/posts/choosing-and-making-quality-npm-modules/coverage.png)
 
 Tests are great, but to be efficient they must cover a maximum of cases in your module.
 
@@ -57,7 +57,7 @@ You can also send this report to a service like [Coveralls](https://coveralls.io
 
 For Users:
 
-- Check the module readme for a Coveralls "badge" like this: ![Coverage status for gitlabhq](coverage-86.png)
+- Check the module readme for a Coveralls "badge" like this: ![Coverage status for gitlabhq](/posts/choosing-and-making-quality-npm-modules/coverage-86.png)
 
 For Authors:
 
@@ -114,7 +114,7 @@ For Authors:
 
 ### Code quality
 
-![Report with CodeClimate](codeclimate.png)
+![Report with CodeClimate](/posts/choosing-and-making-quality-npm-modules/codeclimate.png)
 
 Quality is a combination of many criteria: consistency, readability, maintainability, etc. It can be hard to evaluate, but some tools can help you in this task.
 
@@ -124,7 +124,7 @@ There is also some tools to check your code maintainability like [Plato](https:/
 
 For Users:
 
-- Check the module readme for a CodeClimate "badge" like this: ![CodeClimate status for jekyll](codeclimate-3-4.png)
+- Check the module readme for a CodeClimate "badge" like this: ![CodeClimate status for jekyll](/posts/choosing-and-making-quality-npm-modules/codeclimate-3-4.png)
 - Search a `.jshintrc` file (JSHint) and/or `.jscs.json` file (JSCS) at the project root.
 
 For Authors:
