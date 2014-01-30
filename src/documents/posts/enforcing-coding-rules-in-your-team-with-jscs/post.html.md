@@ -145,11 +145,11 @@ npm install grunt-githooks --save-dev
 And add a `githooks` entry in your `Gruntfile.js`:
 
 ```javascript
-  githooks: {
-    all: {
-      'pre-commit': 'test'
-    }
+githooks: {
+  all: {
+    'pre-commit': 'test'
   }
+}
 ```
 
 Run `grunt githooks` to bind the tasks and you're done.
