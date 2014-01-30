@@ -8,7 +8,7 @@
 		<title>{{ site.title }}</title>
 		<link rel="stylesheet" href="/statics/css/dist/main.css" media="all" />
 		<link href="/feeds/posts.xml" rel="alternate" title="{{ title }}" type="application/atom+xml" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>if(/*@cc_on!@*/false&&document.documentMode===10)document.documentElement.className+=' ie10 ie';</script>
 	</head>
 	<body>
