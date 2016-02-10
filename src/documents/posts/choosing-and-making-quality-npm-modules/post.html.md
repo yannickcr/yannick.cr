@@ -25,7 +25,7 @@ I made a list of tools/practices to help you to check npm modules. It can help y
 
 ![Running tests with Mocha](/posts/choosing-and-making-quality-npm-modules/tests.png)
 
-According to [Nodechecker](nodechecker.com) more than half of the npm modules do not have any tests, that's sad :(.
+According to [Nodechecker](https://nodechecker.com) half of the npm modules do not have any tests, that's sad :(.
 
 The presence of a complete test suite is very important to help you to see if the functionalities of the module were fully tested by the author. And combined with a continuous integration service like [Travis CI](https://travis-ci.org) you can easily check the module status at each commit.
 
